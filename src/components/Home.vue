@@ -8,26 +8,10 @@
                     <b-button>Оставить заявку</b-button>
                 </b-col>
                 <b-col>
-                    <b-carousel
-                            id="carousel-fade" fade indicators>
-                        <b-carousel-slide>
+                    <b-carousel id="carousel-fade" fade indicators>
+                        <b-carousel-slide v-for="images in Images">
                             <template v-slot:img>
-                                <img src="../../public/home/1.png" alt="двойная_накладка"/>
-                            </template>
-                        </b-carousel-slide>
-                        <b-carousel-slide>
-                            <template v-slot:img>
-                                <img src="../../public/home/2.png" alt="накладка_на_выключатель"/>
-                            </template>
-                        </b-carousel-slide>
-                        <b-carousel-slide>
-                            <template v-slot:img>
-                                <img src="../../public/home/3.png" alt="накладка_на_розетку"/>
-                            </template>
-                        </b-carousel-slide>
-                        <b-carousel-slide>
-                            <template v-slot:img>
-                                <img src="../../public/home/4.png" alt="тройная_накладка"/>
+                                <img :src="images.src" :alt="images.alt"/>
                             </template>
                         </b-carousel-slide>
                     </b-carousel>
@@ -41,6 +25,28 @@
 <script>
     export default {
         name: "Home",
+        data(){
+            return{
+                Images:[
+                    {
+                        src:'./home/1.png',
+                        alt:'1'
+                    },
+                    {
+                        src:'./home/2.png',
+                        alt:'2'
+                    },
+                    {
+                        src:'./home/3.png',
+                        alt:'3'
+                    },
+                    {
+                        src:'./home/4.png',
+                        alt:'4'
+                    },
+                ]
+            }
+        }
     }
 </script>
 
