@@ -14,10 +14,10 @@
                 <b-navbar-nav>
                     <b-nav-item href="#About">О нас</b-nav-item>
                     <b-nav-item href="#Advantages">Преимущества</b-nav-item>
-                    <b-nav-item href="#FormEntry">Этапы работы</b-nav-item>
+                    <b-nav-item href="#Stages">Этапы работы</b-nav-item>
                     <b-nav-item href="#Types">Грузоперевозки</b-nav-item>
-                    <b-nav-item href="#Portfolio">Расчет стоимости</b-nav-item>
-                    <b-nav-item href="#MyFooter">Упаковка</b-nav-item>
+                    <b-nav-item href="#Calculation">Расчет стоимости</b-nav-item>
+                    <b-nav-item href="#Package">Упаковка</b-nav-item>
                     <b-nav-item href="#MyFooter">
                         <a :href="href" :target="target">
                             {{http}}
@@ -37,9 +37,9 @@
         data(){
             return{
                 svg:logo,
-                href:'tel:' + information.phone,
+                href:'tel:' + information.telephone,
                 target:'_self',
-                http:information.phone
+                http:information.telephone
             }
         }
     }
