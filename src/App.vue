@@ -5,6 +5,11 @@
       <Advantages/>
       <Types/>
       <About/>
+      <Stages/>
+      <Customs/>
+      <Calculation/>
+      <Package/>
+      <MyFooter/>
   </div>
 </template>
 <script>
@@ -13,9 +18,19 @@
     import Advantages from "@/components/Advantages";
     import Types from "@/components/Types";
     import About from "@/components/About";
+    import Stages from "@/components/Stages";
+    import Customs from "@/components/Customs";
+    import Calculation from "@/components/Calculation";
+    import Package from "@/components/Package";
+    import MyFooter from "@/components/MyFooter";
     export default {
         name: 'App',
         components: {
+            MyFooter,
+            Package,
+            Calculation,
+            Customs,
+            Stages,
             About,
             Types,
             Advantages,
@@ -43,13 +58,28 @@
         padding-right: 15px !important;
         padding-left: 15px !important;
     }
-    #Types{
-        min-height: 75vh;
+    /*контейнер, который включает в себя повтор блоков*/
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;
     }
     #Advantages{
         background: url("../public/bgAd2.png") no-repeat;
-        background-size: cover;
+        background-size: 100% 100%;
         padding: 15px 0 50px;
+    }
+    #Customs{
+        background: url("../public/bgCustoms2.png") no-repeat;
+        background-size: 100% 100%;
+        padding: 15px 0 50px;
+    }
+    #Package{
+        background: url("../public/bgPack2.jpg") no-repeat;
+        background-size: 100% 100%;
+        padding: 15px 0 50px;
+    }
+    img{
+        width: 100%;
     }
     /*заголовки*/
     h1{
@@ -59,11 +89,60 @@
         font-size: 3.7rem !important;
         line-height: 3.8rem;
     }
-    p{
+    p,.form-control, .btn{
         font-family: "Montserrat", sans-serif;
         font-size: 1.25rem;
         font-weight: 400 !important;
         margin-bottom: .5rem !important;
+    }
+    .btn{
+        font-size: 1.35rem !important;
+    }
+    .form-control{
+        font-size: 1.1rem !important;
+    }
+    input::placeholder{
+        color: white !important;
+    }
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+    .slider.round:before {
+        border-radius: 50%;
     }
     #Home button{
         color: white;
@@ -114,17 +193,16 @@
         text-align: center;
         padding-bottom: 15px;
     }
-    #Advantages{
-        .title {
+    #Advantages, #Customs, #Package{
+        h2 {
             overflow: hidden;
             text-align: center;
         }
-        .title span {
+        h2 span {
             display: inline-block;
             vertical-align: middle;
         }
-        .title:before,
-        .title:after {
+        h2:before, h2:after{
             content: "";
             display: inline-block;
             vertical-align: middle;
@@ -133,21 +211,51 @@
             background-color: #FF7A00;
             position: relative;
         }
-        .title:before {
+
+    }
+    #Advantages, #Package{
+        h2:before {
             margin-left: -100%;
             left: -25%;
         }
-        .title:after {
+        h2:after {
             margin-right: -100%;
             right: -25%;
         }
     }
-    #Types{
-        padding: 15px 0 50px;
+    #Customs{
+        h2:before {
+            margin-left: -100%;
+            left: -5%;
+        }
+        h2:after {
+            margin-right: -100%;
+            right: -5%;
+        }
+    }
+    #Types, #Stages{
+        padding: 15px 0 70px;
         h2{
             text-decoration: underline;
             text-underline-offset: 10px;
             text-decoration-color: #FF7A00;
         }
+    }
+    #About{
+        background: url("../public/bgAbout2.png") no-repeat;
+        background-size: 100% 100%;
+
+
+    }
+    #About, #Calculation{
+        padding: 15px 0 80px;
+        h2{
+            color: #FF7A00;
+            padding-top: 5%;
+            font-size: 2.5rem !important;
+        }
+    }
+    #MyFooter{
+        padding: 40px;
     }
 </style>
