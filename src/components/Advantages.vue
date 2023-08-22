@@ -1,11 +1,7 @@
 <template>
     <div id="Advantages">
         <b-container>
-            <div class="title">
-                <span>
-                    <h2>Преимущества</h2>
-                </span>
-            </div>
+            <h2><span>Преимущества</span></h2>
             <b-row>
                 <b-col>
                     <b-row v-for="advantages in Advantages1" :key="advantages.index">
