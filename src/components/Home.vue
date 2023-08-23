@@ -5,7 +5,7 @@
                 <b-col>
                     <h1>Доставка сборных грузов из Китая </h1>
                     <p>Надежная перевозка груза любой категории</p>
-                    <b-button>Оставить заявку</b-button>
+                    <b-button><a href="#Calculation">Оставить заявку</a></b-button>
                 </b-col>
                 <b-col>
                     <b-carousel id="carousel-fade" fade indicators>
@@ -50,10 +50,6 @@
     }
 </script>
 
-<style scoped lang="scss">
-img{
-    width: 100%;
-    height: 400px;
-}
+<style scoped>
 
 </style>

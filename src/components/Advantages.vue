@@ -74,29 +74,5 @@
 </script>
 
 <style scoped>
-    .number{
-        color: #FF7A00;
-        font-size: 3.8rem;
-        text-align: center;
-        transform: scale(1.2, 1.2);
-    }
-    .descr{
-        color: #FF7A00;
-        text-align: center;
-        margin-top: -15%;
-    }
-    .text{
-        display: flex;
-        height: 110px;
-        align-items: center;
-    }
-    .col-2{
-        padding: 0 !important;
-    }
-    .col{
-        padding: 0 25px !important;
-    }
-    svg{
-        padding: 8px;
-    }
+
 </style>

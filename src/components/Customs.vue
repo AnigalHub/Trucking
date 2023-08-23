@@ -25,15 +25,15 @@
                 Customs: [
                     {
                         src:'./customs/1.png',
-                        alt:''
+                        alt:'1'
                     },
                     {
                         src:'./customs/2.png',
-                        alt:''
+                        alt:'2'
                     },
                     {
                         src:'./customs/3.png',
-                        alt:''
+                        alt:'3'
                     }
                 ],
             }
@@ -42,19 +42,5 @@
 </script>
 
 <style scoped>
-    img{
-        width: 100%;
-        filter: brightness(50%);
-    }
-    p{
-        margin-top: 3%;
-    }
-    svg{
-        width: 60px;
-        margin: 0 auto;
-        display: block;
-        position: absolute;
-        top: 40%;
-        left: 42%;
-    }
+
 </style>

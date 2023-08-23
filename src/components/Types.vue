@@ -69,65 +69,6 @@
     }
 </script>
 
-<style>
-    .nav-pills .nav-link {
-        min-height: 120px !important;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    }
-    .nav-pills .nav-link.active{
-        color: #FF7A00 !important;
-        filter: contrast(90%) brightness(150%);
-    }
-    .card-header {
-        padding: 0 !important;
-    }
-    .card{
-        padding: 0 3.25rem;
-        background: transparent !important;
-    }
-    #Types .tab-content{
-        background-size: 100% 100% !important;
-        background: url("../../public/types/55.jpg");
-        margin-left: 10px;
-        border: 2px solid #FF7A00;
-        border-radius: 5px;
-    }
-    #Types p{
-        font-size: 1.25rem;
-    }
-    #Types li{
-        margin: 0 0 5px;
-        border: 2px solid #FF7A00;
-        border-radius: 5px;
-        font-family: "Montserrat", sans-serif;
-        font-size: 1.25rem;
-        font-weight: 400 !important;
-        margin-bottom: 0.5rem !important;
-    }
-    #Types .card-text li{
-        border: none;
-        margin-top: 3% !important;
-    }
-    #Types li:nth-child(1) .nav-link{
-        background-size: 100% 100% !important;
-       background: url("../../public/types/11.jpg");
-    }
-    #Types li:nth-child(2) .nav-link{
-        background-size: 100% 100% !important;
-        background: url("../../public/types/22.jpg");
-    }
-    #Types li:nth-child(3) .nav-link{
-        background-size: 100% 100% !important;
-        background: url("../../public/types/33.jpg");
-    }
-    #Types li:nth-child(4) .nav-link{
-        background-size: 100% 100% !important;
-        background: url("../../public/types/44.jpg");
-    }
-    #Types li:nth-child(4){
-        margin-bottom: 0 !important;
-    }
+<style scoped>
+
 </style>

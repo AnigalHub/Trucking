@@ -28,25 +28,25 @@
                 Package: [
                     {
                         src:'./package/1.png',
-                        alt:'1',
+                        alt:'деревянная обрешотка',
                         name:'Деревянная обрешотка',
                         text:'Защита от механических повреждений и различных косаний'
                     },
                     {
                         src:'./package/2.png',
-                        alt:'2',
+                        alt:'стрейч плёнка',
                         name:'Стрейч-плёнка',
                         text:'Скрепление груза,  состоящего из нескольких элементов'
                     },
                     {
                         src:'./package/3.png',
-                        alt:'3',
+                        alt:'пузырчатая полиэтиленовая пленка',
                         name:'Пузырчатая полиэтиленовая пленка',
                         text:'Защита от ударов, мелких царапин и потертостей'
                     },
                     {
                         src:'./package/4.png',
-                        alt:'4',
+                        alt:'полипропиленовый мешок',
                         name:'Полипропиленовый мешок',
                         text:'Защита от пыли и нарушения целостности груза'
                     },
@@ -56,16 +56,6 @@
     }
 </script>
 
-<style scoped lang="scss">
-    .flex-container {
-        .row{
-            width: 49%;
-            padding: 15px;
-        }
-        .name{
-            text-decoration: underline;
-            text-underline-offset: 10px;
-            text-decoration-color: #FF7A00;
-        }
-    }
+<style scoped>
+
 </style>
