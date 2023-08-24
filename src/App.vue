@@ -339,6 +339,7 @@
         }
         .nav-item{
             margin: 0 0 5px;
+            text-align: center;
             &:nth-child(1) .nav-link{
                 background: url("../public/types/11.jpg");
             }
@@ -456,16 +457,13 @@
             div{
                 border: .25px solid rgba(255, 122, 0, 0.45);
                 background: #1F1E1E;
-                width: 20%;
+                width: 17%;
                 padding: 15px 0;
                 &:first-child{
                     border-top-left-radius: 20px 20px;
                 }
-                &:nth-child(2),&:nth-child(7){
-                    width: 23%;
-                }
-                &:nth-child(4),&:nth-child(9){
-                    width: 17%;
+                &:nth-child(2),&:nth-child(1),&:nth-child(6),&:nth-child(7), &:nth-child(3),&:nth-child(8){
+                    width: 21.5%;
                 }
                 &:nth-child(5){
                     border-top-right-radius: 10px 10px;
@@ -479,7 +477,6 @@
                 p{
                     float: left;
                     font-size: 1.1rem;
-                    margin-right: 10px;
                     padding: 0.375rem 15px;
                 }
             }
@@ -487,7 +484,7 @@
         button{
             margin-top: 30px;
             border-radius: 10px;
-            width: 105%;
+            width: 103.5%;
             margin-left: -2.5%;
             background: rgba(255, 122, 0, 0.2);
             padding: 15px 0;
@@ -530,13 +527,11 @@
         }
         #About, #Calculation{
             h2{
-                color: #FF7A00;
-                padding-top: 5%;
                 font-size: 2rem !important;
             }
         }
         p, .form-control, .btn, li{
-            font-size: 1.15rem;
+            font-size: 1.15rem !important;
         }
         #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
             padding: 15px 0 40px;
@@ -564,6 +559,9 @@
             }
             .nav-pills .nav-link {
                 height: 130px !important;
+            }
+            .card {
+                padding: 0 2rem;
             }
         }
         #About{
@@ -601,28 +599,197 @@
             }
             .flex-container{
                 div {
-                    width: 21%;
+                    width: 19.5%;
                     padding: 10px 0;
-                    &:nth-child(2),&:nth-child(7){
-                        width: 24%;
-                    }
-                    &:nth-child(3),&:nth-child(8){
-                        width: 15%;
-                    }
-                    &:nth-child(4),&:nth-child(9){
-                        width: 19%;
+                    &:nth-child(2),&:nth-child(1),&:nth-child(6),&:nth-child(7){
+                        width: 19.5%;
                     }
                     p{
                         margin-right: 0;
-                        padding: 0.375rem 10px;
+                        padding: 0.3rem;
+                        font-size: 1rem
+                    }
+                }
+
+            }
+            .form-control {
+                padding: .3rem;
+                font-size: 1rem !important;
+            }
+        }
+        #Package{
+            .col{
+                padding-right: 0 !important;
+            }
+        }
+        #MyFooter{
+            .flex-container div{
+                width: 40%;
+                .row{
+                    width: 100%;
+                }
+                &:last-child{
+                    width: 60%;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px){
+        h1{
+            font-size: 2.5rem !important;
+            line-height: 2.9rem;
+        }
+        h2{
+          font-size: 1.35rem !important;
+        }
+        #About, #Calculation{
+            h2{
+                font-size: 1.4rem !important;
+            }
+        }
+        p, .form-control, .btn, li{
+            font-size: 1rem !important;
+        }
+        #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
+            padding: 15px 0 45px;
+        }
+        #Home{
+            padding: 30px 0 80px;
+            p,button, .btn {
+                font-size: 1rem !important;
+            }
+            .carousel img {
+                height: 290px;
+            }
+            .shadow{
+                height: 99%;
+            }
+        }
+        #Advantages{
+            .number {
+                font-size: 2.35rem;
+            }
+            svg {
+                padding: 0;
+            }
+            .text {
+                height: 80px;
+            }
+        }
+        #Types{
+            .col-auto {
+                width: 40% !important;
+            }
+            h3{
+                padding-bottom: 10px;
+                font-size: 1.2rem;
+            }
+            .nav-pills .nav-link {
+                min-height: 110px !important;
+            }
+            .card {
+                padding: 0;
+            }
+        }
+        #About{
+            .numbers {
+                width: 230px;
+                height: 230px;
+                margin: 40% auto 0 0;
+            }
+            .number{
+                font-size: 4.5rem !important;
+            }
+            .col-4{
+                max-width: 40%;
+            }
+            ul{
+                margin-left: -9% !important;
+            }
+        }
+        #Stages{
+            .col-auto {
+                width: 100% !important;
+            }
+            h3{
+                font-size: 1.2rem;
+                margin-bottom: 0.25rem;
+            }
+            h4{
+                font-size: 1.15rem;
+            }
+            .card{
+                padding: 0;
+            }
+            .nav-item, .flex-column li {
+                width: 21%;
+                margin: 2% 0 2% 4%;
+                min-width: 18% !important;
+            }
+            .nav-item .nav-link {
+                padding: 0.5rem 0.1rem !important;
+                min-height: 150px !important;
+            }
+            .tab-content {
+                height: 260px;
+            }
+            .card-body{
+                line-height: 1.4rem;
+                padding: 0.8rem;
+            }
+            .card-text li {
+                border: none;
+                margin-top: 1% !important;
+            }
+        }
+        .slider{
+            width: 50px;
+        }
+        #Customs{
+            svg{
+                width: 42px;
+            }
+        }
+        #Calculation{
+            .flex-container, button {
+                width: 100%;
+                margin-left: 0;
+            }
+            .flex-container{
+                div {
+                    width: 50%;
+                    padding: 10px 0;
+                    &:nth-child(2),&:nth-child(1),&:nth-child(3),&:nth-child(6),&:nth-child(7),&:nth-child(8){
+                        width: 50%;
+                    }
+                    &:nth-child(2){
+                        border-top-right-radius: 10px;
+                    }
+                    &:nth-child(5){
+                        border-top-right-radius: 0;
+                    }
+                    &:nth-child(6){
+                        border-bottom-left-radius: 0;
+                    }
+                    &:nth-child(9){
+                        border-bottom-left-radius: 10px;
+                    }
+                    p{
+                        margin-right: 0;
+                        padding: 0.3rem;
+                        font-size: 1rem
                     }
                 }
             }
             .form-control {
                 padding: .3rem;
+                font-size: 1rem !important;
             }
         }
         #Package{
+            .flex-container .row {
+                width:50%;
+            }
             .col{
                 padding-right: 0 !important;
             }

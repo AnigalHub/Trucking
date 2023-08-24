@@ -7,10 +7,22 @@
                     <b-form-input autocomplete="off" type="text" placeholder="Пункт отправления"/>
                 </div>
                 <div>
-                    <b-form-input autocomplete="off" type="text" placeholder="Наименование товара"/>
+                    <b-form-input autocomplete="off" type="text" placeholder="Пункт назначения"/>
+                </div>
+                <div>
+                    <b-form-input autocomplete="off" type="text" placeholder="Наименование"/>
                 </div>
                 <div>
                     <b-form-input autocomplete="off" type="text" placeholder="ФИО"/>
+                </div>
+                <div>
+                    <b-form-input autocomplete="off" type="text" placeholder="+7(9**)***-**-**"/>
+                </div>
+                <div>
+                    <b-form-input autocomplete="off" type="text" placeholder="Email"/>
+                </div>
+                <div>
+                    <b-form-input autocomplete="off" type="number" placeholder="Объем груза, м3"/>
                 </div>
                 <div>
                     <b-form-input autocomplete="off" type="text" placeholder="Вес груза, кг"/>
@@ -21,18 +33,6 @@
                         <input type="checkbox">
                         <span class="slider round"></span>
                     </label>
-                </div>
-                <div>
-                    <b-form-input autocomplete="off" type="text" placeholder="Пункт назначения"/>
-                </div>
-                <div>
-                    <b-form-input autocomplete="off" type="text" placeholder="+7(9**)***-**-**"/>
-                </div>
-                <div>
-                    <b-form-input autocomplete="off" type="text" placeholder="Email"/>
-                </div>
-                <div>
-                    <b-form-input autocomplete="off" type="number" placeholder="Объем груза, м3"/>
                 </div>
                 <div>
                     <p>Упаковка</p>
