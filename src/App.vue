@@ -376,6 +376,9 @@
             margin: 28% auto 0 10%;
             border: 2px solid rgba(255, 122, 0, 0.5);
         }
+        .col{
+            padding-right: 4rem !important;
+        }
     }
     #Stages{
         .nav-link{
@@ -404,7 +407,7 @@
             background: #1C1D1E;
             margin-top: 1%;
             height: 500px;
-            border-radius: 10px;
+            border-radius: 5px;
         }
         .nav-item{
             min-width: 40%;
@@ -465,13 +468,13 @@
                     width: 17%;
                 }
                 &:nth-child(5){
-                    border-top-right-radius: 20px 20px;
+                    border-top-right-radius: 10px 10px;
                 }
                 &:nth-child(6){
-                    border-bottom-left-radius: 20px 20px;
+                    border-bottom-left-radius: 10px 10px;
                 }
                 &:last-child{
-                    border-bottom-right-radius: 20px 20px;
+                    border-bottom-right-radius: 10px 10px;
                 }
                 p{
                     float: left;
@@ -511,8 +514,129 @@
     }
     #MyFooter{
         padding: 40px;
+        .flex-container div{
+            width: 50%;
+        }
         svg{
             width: 30px;
+        }
+    }
+
+    /*АДАПТИВНОСТЬ*/
+    @media screen and (min-width: 992px) and (max-width: 1200px){
+        h1{
+            font-size: 3.2rem !important;
+            line-height: 3.5rem;
+        }
+        #About, #Calculation{
+            h2{
+                color: #FF7A00;
+                padding-top: 5%;
+                font-size: 2rem !important;
+            }
+        }
+        p, .form-control, .btn, li{
+            font-size: 1.15rem;
+        }
+        #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
+            padding: 15px 0 40px;
+        }
+        #Home{
+            p,button, .btn {
+                font-size: 1.25rem !important;
+            }
+           .carousel img {
+                height: 350px;
+           }
+        }
+        #Advantages{
+            .number {
+                font-size: 3.2rem;
+            }
+           svg {
+                padding: 5px;
+           }
+        }
+        #Types{
+            h3{
+                padding-bottom: 10px;
+                font-size: 1.5rem;
+            }
+            .nav-pills .nav-link {
+                height: 130px !important;
+            }
+        }
+        #About{
+            .numbers {
+                width: 285px;
+                height: 285px;
+                margin: 28% auto 0 1%;
+            }
+        }
+        #Stages{
+            h3{
+                font-size: 1.4rem;
+                margin-bottom: 0.25rem;
+            }
+            h4{
+                font-size: 1.2rem;
+            }
+            .nav-item .nav-link {
+                min-height: 190px !important;
+            }
+           .tab-content {
+                height: 430px;
+           }
+           .card-body{
+               line-height: 1.55rem;
+           }
+        }
+        .slider{
+            width: 50px;
+        }
+        #Calculation{
+            .flex-container, button {
+                width: 100%;
+                margin-left: 0;
+            }
+            .flex-container{
+                div {
+                    width: 21%;
+                    padding: 10px 0;
+                    &:nth-child(2),&:nth-child(7){
+                        width: 24%;
+                    }
+                    &:nth-child(3),&:nth-child(8){
+                        width: 15%;
+                    }
+                    &:nth-child(4),&:nth-child(9){
+                        width: 19%;
+                    }
+                    p{
+                        margin-right: 0;
+                        padding: 0.375rem 10px;
+                    }
+                }
+            }
+            .form-control {
+                padding: .3rem;
+            }
+        }
+        #Package{
+            .col{
+                padding-right: 0 !important;
+            }
+        }
+        #MyFooter{
+            .flex-container div{
+                width: 40%;
+                .row{
+                    width: 100%;
+                }
+                &:last-child{
+                    width: 60%;
+                }
+            }
         }
     }
 </style>

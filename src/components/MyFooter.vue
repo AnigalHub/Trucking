@@ -1,8 +1,8 @@
 <template>
     <div id="MyFooter">
         <b-container>
-            <b-row>
-                <b-col>
+            <div class="flex-container">
+                <div>
                     <b-row>
                         <b-col cols="1"><component :is="telephone"/></b-col>
                         <b-col><p>{{information.telephone}}</p></b-col>
@@ -12,13 +12,13 @@
                         <b-col cols="1"><component :is="document"/></b-col>
                         <b-col><p>{{information.mail}}</p></b-col>
                     </b-row>
-                </b-col>
-                <b-col>
+                </div>
+                <div>
                     <p>{{information.city}}</p>
                     <br/>
                     <p>{{information.address}}</p>
-                </b-col>
-            </b-row>
+                </div>
+            </div>
         </b-container>
     </div>
 </template>
