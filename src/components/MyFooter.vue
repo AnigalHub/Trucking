@@ -2,7 +2,7 @@
     <div id="MyFooter">
         <b-container>
             <div class="flex-container">
-                <div>
+                <div class="inf">
                     <b-row>
                         <b-col cols="1"><component :is="telephone"/></b-col>
                         <b-col><p>{{information.telephone}}</p></b-col>
@@ -13,7 +13,7 @@
                         <b-col><p>{{information.mail}}</p></b-col>
                     </b-row>
                 </div>
-                <div>
+                <div class="inf">
                     <p>{{information.city}}</p>
                     <br/>
                     <p>{{information.address}}</p>
