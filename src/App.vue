@@ -437,17 +437,27 @@
         }
     }
     #Customs{
+        .carousel{
+            display: none;
+        }
+        .flex-container{
+            align-items: center;
+            justify-content: center;
+        }
+        .flex-container div{
+            width: 33%;
+            padding: 0 15px;
+            //svg{
+               // width: 60px;
+               // z-index: 1000;
+               // position: absolute;
+               // padding-top: 13%;
+               // margin-left: -13%;
+           // }
+        }
         img{
             filter: brightness(50%);
             margin-bottom: 6%;
-        }
-        svg{
-            width: 60px;
-            margin: 0 auto;
-            display: block;
-            position: absolute;
-            top: 40%;
-            left: 42%;
         }
     }
     #Calculation{
@@ -460,7 +470,7 @@
                 width: 17%;
                 padding: 15px 0;
                 &:first-child{
-                    border-top-left-radius: 20px 20px;
+                    border-top-left-radius: 10px 10px;
                 }
                 &:nth-child(2),&:nth-child(1),&:nth-child(6),&:nth-child(7), &:nth-child(3),&:nth-child(8){
                     width: 21.5%;
@@ -510,16 +520,17 @@
         }
     }
     #MyFooter{
-        padding: 40px;
-        .flex-container div{
+        padding: 40px 0 10px;
+        .flex-container .inf{
             width: 50%;
+            margin-bottom: 2%;
         }
         svg{
             width: 30px;
         }
     }
 
-    /*АДАПТИВНОСТЬ*/
+                /*АДАПТИВНОСТЬ*/
     @media screen and (min-width: 992px) and (max-width: 1200px){
         h1{
             font-size: 3.2rem !important;
@@ -623,13 +634,10 @@
             }
         }
         #MyFooter{
-            .flex-container div{
+            .flex-container .inf{
                 width: 40%;
                 .row{
                     width: 100%;
-                }
-                &:last-child{
-                    width: 60%;
                 }
             }
         }
@@ -685,7 +693,7 @@
                 font-size: 1.2rem;
             }
             .nav-pills .nav-link {
-                min-height: 110px !important;
+                min-height: 115px !important;
             }
             .card {
                 padding: 0;
@@ -795,8 +803,280 @@
             }
         }
         #MyFooter{
-            .flex-container div{
+            .flex-container .inf{
                 width: 40%;
+                .row{
+                    width: 100%;
+                }
+                &:last-child{
+                    width: 60%;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 500px) and (max-width: 768px){
+        h1{
+            font-size: 1.95rem !important;
+            line-height: 2.25rem;
+            margin-bottom: 4% !important;
+        }
+        h2{
+            font-size: 1.15rem !important;
+            padding-top: 0 !important;
+        }
+        #About, #Calculation{
+            h2{
+                font-size: 1.25rem !important;
+            }
+        }
+        p, .form-control, .btn, li{
+            font-size: .9rem !important;
+        }
+        #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
+            padding: 35px 0 35px;
+        }
+        #Home{
+            padding: 10px 0 40px;
+            .row{
+                flex-direction: column-reverse;
+            }
+            p{
+                margin-bottom: 6% !important;
+            }
+            p,button, .btn {
+                font-size: 1rem !important;
+            }
+            button{
+                padding: 8px 35px !important;
+            }
+            .carousel{
+                margin-left: 1%;
+            }
+            .carousel img {
+                width: 100%;
+                height: 220px;
+            }
+            .shadow{
+                top: 10%;
+                left: 13%;
+                width: 83%;
+                height: 97%;
+            }
+        }
+        #Advantages{
+            .number {
+                font-size: 1.8rem;
+                width: 50px;
+                margin-bottom: 5%;
+            }
+            .col-2{
+                max-width: 30%;
+            }
+            .col, .col-2{
+                padding: 0 15px !important;
+            }
+            svg {
+                width: 45px;
+                padding: 0;
+            }
+            .text {
+                height: 60px;
+                margin-bottom: 0 !important;
+            }
+        }
+        #Types{
+            .col-auto {
+                width: 100% !important;
+            }
+            .flex-column {
+                flex-direction: row !important;
+            }
+            .nav-item, .flex-column li {
+                width: 40%;
+                margin: 2% 2% 2% 2%;
+                min-width: 45% !important;
+            }
+            h3{
+                padding-bottom: 10px;
+                font-size: 1.2rem;
+            }
+            .nav-pills .nav-link {
+                min-height: 100px !important;
+            }
+            .card {
+                padding: 0;
+                margin-top: -4%;
+            }
+            .card-body{
+                padding: .8rem;
+                height: 400px;
+            }
+            .tab-content{
+                margin-top: 20px;
+                margin-right: 20px;
+            }
+        }
+        #About{
+            .row{
+                flex-direction: column-reverse;
+            }
+            h2{
+                padding-bottom: 10px;
+            }
+            .numbers {
+                width: 210px;
+                height: 210px;
+                padding: 10px;
+                margin: 2% auto;
+                display: block;
+            }
+            .number{
+                font-size: 4rem !important;
+            }
+            .col{
+                padding-right: 1rem !important;
+            }
+            .col-4{
+                max-width: 100%;
+            }
+            li{
+                margin-bottom: 1rem !important;
+            }
+            ul{
+                margin-left: -5% !important;
+                margin-right: 5%;
+            }
+        }
+        #Stages{
+            .col-auto {
+                width: 100% !important;
+            }
+            h3{
+                font-size: 1.2rem;
+                margin-bottom: 0.25rem;
+            }
+            h4{
+                font-size: 1.15rem;
+            }
+            .card{
+                padding: 0;
+            }
+            .nav-item, .flex-column li {
+                width: 42%;
+                margin: 2% 4% 2% 4%;
+                min-width: 42% !important;
+            }
+            .nav-item .nav-link {
+                padding: 0.5rem 0.1rem !important;
+                min-height: 160px !important;
+            }
+            .tab-content {
+                height: 250px;
+                margin-left: 4%;
+                margin-right: 3%;
+            }
+            .card-body{
+                line-height: 1.4rem;
+                padding: 0.8rem;
+            }
+            .card-text li {
+                border: none;
+                margin-top: 1% !important;
+            }
+        }
+        .slider{
+            width: 50px;
+        }
+        #Customs{
+            .carousel{
+                display: block;
+                width: 50%;
+                margin: 0 auto;
+            }
+            .flex-container{
+                display: none;
+            }
+            .flex-container div{
+                width: 50%;
+                padding: 0 15px;
+            }
+            h2{
+                padding: 0 4%;
+                &:before {
+                    margin-left: -100%;
+                    left: 5%;
+                }
+                &:after {
+                    margin-right: -100%;
+                    right: 5%;
+                }
+            }
+            img{
+                margin-top: 6%;
+            }
+            svg{
+                width: 35px;
+            }
+        }
+        #Calculation{
+            .flex-container, button {
+                width: 100%;
+                margin-left: 0;
+            }
+            button{
+                margin-top: 20px;
+                padding: 10px 0;
+            }
+            .flex-container{
+                div {
+                    width: 50%;
+                    padding: 5px 0;
+                    &:nth-child(2),&:nth-child(1),&:nth-child(3),&:nth-child(6),&:nth-child(7),&:nth-child(8){
+                        width: 50%;
+                    }
+                    &:nth-child(2){
+                        border-top-right-radius: 10px;
+                    }
+                    &:nth-child(5){
+                        border-top-right-radius: 0;
+                    }
+                    &:nth-child(6){
+                        border-bottom-left-radius: 0;
+                    }
+                    &:nth-child(9){
+                        border-bottom-left-radius: 10px;
+                    }
+                    p{
+                        margin-right: 0;
+                        padding: 0.3rem;
+                        font-size: .9rem
+                    }
+                }
+            }
+            .form-control {
+                padding: .3rem;
+                font-size: .9rem !important;
+            }
+            svg{
+                height: 10px;
+                padding: 0;
+            }
+        }
+        #Package{
+            .flex-container .row {
+                width:100%;
+                padding: 7.5px 15px 7.5px;
+            }
+            .col{
+                padding-right: 0 !important;
+            }
+            .col-4{
+                max-width: 20%;
+            }
+        }
+        #MyFooter{
+            .flex-container .inf{
+                width: 38%;
                 .row{
                     width: 100%;
                 }
