@@ -59,22 +59,22 @@
         padding-top: 0 !important;
         padding-bottom: 0 !important;
         svg{
-            width: 100%;
+            width: 150px;
             transform: scale(1.1, 1);
             height: 45px;
         }
     }
     /*меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)*/
     .navbar{
-        background:#010101;
+        background: #010101;
         background-size:cover;
         padding: 5px 0
     }
     /*все кнопки в меню*/
     .nav-link{
         color: #ffffff !important;
-        padding-right: .7rem !important;
-        padding-left: .7rem !important;
+        padding-right: .65rem !important;
+        padding-left: .65rem !important;
         font-family: "Montserrat", sans-serif;
         font-size: 1rem;
         font-weight: 400 !important;
@@ -88,12 +88,6 @@
         .nav-link {
             font-size: .9rem;
             padding: 0.2rem 0 !important;
-        }
-    }
-    @media screen and (max-width: 1200px) {
-        /*меню на всех экранах (которое будет и складываться на маленьких экранах и раскрываться на больших)*/
-        .navbar{
-            background:rgb(10 15 24 / 98%);
         }
     }
 </style>
