@@ -4,7 +4,7 @@
             <h2>Виды грузоперевозок</h2>
             <b-card no-body>
                 <b-tabs pills card vertical>
-                    <b-tab v-for="(types, index) in Types" :title="types.name">
+                    <b-tab v-for="(types, index) in Types" :title="index">
                         <b-card-text>
                             <h3>{{types.name}}</h3>
                             <p>{{types.text}}</p>
