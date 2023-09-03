@@ -45,6 +45,33 @@
     }
 </style>
 <style lang="scss">
+    /*картинка в модальном окне*/
+    .modal-dialog img{
+        width: 100% !important;
+        box-shadow: none !important;
+    }
+    /*"крестик" (размер) - кнопка закрытия модального окна*/
+    .close {
+        font-size: 2rem !important;
+        padding: 1rem .5rem !important;
+        color: white !important;
+    }
+    /*заголовок модального окна*/
+    .modal-header{
+        padding: .5rem 1.5rem !important;
+    }
+    /*контент модального окна*/
+    .modal-content{background: #2a2929 !important;}
+    /*фразы в заголовке модального меню*/
+    .modal-title{font-weight: 600;}
+    /*тело модального окна*/
+    .modal-body {padding: 0 1rem 1rem 1rem!important;}
+    /*footer-модального окна*/
+    .modal-footer {display: none !important;}
+    @media (min-width: 992px){
+        /*ширина модального окна на разных экранах*/
+        .modal-lg, .modal-xl {max-width: 720px !important;}
+    }
     @mixin h2Underline{
         text-decoration: underline;
         text-underline-offset: 10px;
@@ -149,7 +176,7 @@
     }
     p, .form-control, .btn, li {
         font-family: "Montserrat", sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 400 !important;
         margin-bottom: .5rem !important;
     }
@@ -167,7 +194,7 @@
         font-size: 1.1rem !important;
     }
     input::placeholder{
-        color: white !important;
+        color: rgba(255, 255, 255, 0.5) !important;
     }
     #Advantages{
         background: url("../public/bgAd2.png") no-repeat;
@@ -229,6 +256,12 @@
             }
         }
     }
+    input:checked + .slider {
+        background-color: rgba(255, 122, 0, 0.45);
+    }
+    input:checked + .slider:before {
+        transform: translateX(36px);
+    }
     .card{
         padding: 0 3.25rem;
         background: transparent !important;
@@ -252,7 +285,7 @@
                 background-size: 100% 100% !important;
             }
             &:nth-child(4){
-                margin-bottom: 0 !important;
+                //margin-bottom: 0 !important;
             }
         }
         .tab-content{
@@ -447,17 +480,15 @@
         .flex-container div{
             width: 33%;
             padding: 0 15px;
-            //svg{
-               // width: 60px;
-               // z-index: 1000;
-               // position: absolute;
-               // padding-top: 13%;
-               // margin-left: -13%;
-           // }
+            position: relative;
         }
         img{
             filter: brightness(50%);
             margin-bottom: 6%;
+            &:hover{
+                filter: brightness(55%);
+                cursor: pointer;
+            }
         }
     }
     #Calculation{
@@ -485,6 +516,7 @@
                     border-bottom-right-radius: 10px 10px;
                 }
                 p{
+                    color: rgba(255, 255, 255, 0.5) !important;
                     float: left;
                     font-size: 1.1rem;
                     padding: 0.375rem 15px;
@@ -501,6 +533,7 @@
             border: .25px solid rgba(255, 122, 0, 0.45);
         }
         .form-control {
+            color: white;
             background: transparent;
             border: none;
         }
@@ -541,8 +574,11 @@
                 font-size: 2rem !important;
             }
         }
-        p, .form-control, .btn, li{
+        .form-control, .btn, li{
             font-size: 1.15rem !important;
+        }
+        p{
+            font-size: 1.15rem;
         }
         #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
             padding: 15px 0 40px;
@@ -655,8 +691,11 @@
                 font-size: 1.4rem !important;
             }
         }
-        p, .form-control, .btn, li{
+        .form-control, .btn, li{
             font-size: 1rem !important;
+        }
+        p{
+            font-size: 1rem;
         }
         #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
             padding: 15px 0 45px;
@@ -796,7 +835,7 @@
         }
         #Package{
             .flex-container .row {
-                width:50%;
+                width:54%;
             }
             .col{
                 padding-right: 0 !important;
@@ -829,8 +868,11 @@
                 font-size: 1.25rem !important;
             }
         }
-        p, .form-control, .btn, li{
+        .form-control, .btn, li{
             font-size: .9rem !important;
+        }
+        p{
+            font-size: .9rem;
         }
         #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
             padding: 35px 0 35px;
@@ -861,6 +903,7 @@
                 left: 13%;
                 width: 83%;
                 height: 97%;
+                border: 3.6px solid #FF7A00;
             }
         }
         #Advantages{
@@ -873,7 +916,7 @@
                 max-width: 30%;
             }
             .col, .col-2{
-                padding: 0 15px !important;
+                padding: 0 10px !important;
             }
             svg {
                 width: 45px;
@@ -909,7 +952,7 @@
             }
             .card-body{
                 padding: .8rem;
-                height: 400px;
+                height: 410px;
             }
             .tab-content{
                 margin-top: 20px;
@@ -1075,13 +1118,652 @@
             }
         }
         #MyFooter{
+            svg{
+                width: 24px;
+            }
             .flex-container .inf{
-                width: 38%;
+                width: 45%;
                 .row{
                     width: 100%;
                 }
                 &:last-child{
-                    width: 60%;
+                    width: 55%;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 300px) and (max-width: 500px){
+        h1{
+            font-size: 1.55rem !important;
+            line-height: 2.25rem;
+            margin-bottom: 4% !important;
+        }
+        h2{
+            font-size: 1.15rem !important;
+            padding-top: 0 !important;
+            color: #FF7A00;
+            text-decoration: none;
+             &:before, &:after{
+                display: none !important;
+            }
+        }
+        #Types h2, #Stages h2 {
+            text-decoration: none;
+            text-underline-offset: 1px;
+            text-decoration-color: #FF7A00;
+        }
+        #About, #Calculation{
+            h2{
+                font-size: 1.25rem !important;
+            }
+        }
+        .form-control, .btn, li{
+            font-size: .9rem !important;
+        }
+        p{
+            font-size: .9rem;
+        }
+        #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
+            padding: 25px 0 35px;
+        }
+        #Home{
+            padding: 10px 0 40px;
+            .row{
+                flex-direction: column-reverse;
+            }
+            p{
+                margin-bottom: 6% !important;
+            }
+            p,button, .btn {
+                font-size: .9rem !important;
+            }
+            button{
+                padding: 8px 35px !important;
+            }
+            .carousel{
+                margin-left: 1%;
+            }
+            .carousel img {
+                width: 100%;
+                height: 200px;
+            }
+            .shadow{
+                top: 7%;
+                left: 13%;
+                width: 83%;
+                height: 97%;
+                border: 3.5px solid #FF7A00;
+            }
+        }
+        #Advantages{
+            .row{
+                flex-direction: column;
+                margin: 0;
+                .row{
+                    flex-direction: row;
+                    margin: 0;
+                }
+            }
+            .number {
+                font-size: 2.35rem;
+                width: 60px;
+                margin-bottom: 5%;
+            }
+            .col-2{
+                max-width: 30%;
+            }
+            .col, .col-2{
+                padding: 0 8px !important;
+            }
+            svg {
+                width: 55px;
+                padding: 0;
+            }
+            .text {
+                height: 60px;
+                margin-bottom: 0 !important;
+            }
+        }
+        #Types{
+            .col-auto {
+                width: 100% !important;
+            }
+            .flex-column {
+                flex-direction: row !important;
+            }
+            .nav-item, .flex-column li {
+                width: 100%;
+                margin: 2% 2% 2% 2%;
+                min-width: 45% !important;
+            }
+            h3{
+                padding-bottom: 10px;
+                font-size: 1.2rem;
+            }
+            .nav-pills .nav-link {
+                min-height: 65px !important;
+            }
+            .card {
+                padding: 0;
+                margin-top: -4%;
+            }
+            .card-body{
+                padding: .8rem;
+                height: 540px;
+            }
+            .tab-content{
+                margin-top: 10px;
+                margin-right: 5px;
+            }
+        }
+        #About{
+            .row{
+                flex-direction: column-reverse;
+            }
+            h2{
+                padding-bottom: 10px;
+            }
+            .numbers {
+                width: 210px;
+                height: 210px;
+                padding: 10px;
+                margin: 2% auto;
+                display: block;
+            }
+            .number{
+                font-size: 4rem !important;
+            }
+            .col{
+                padding-right: 1rem !important;
+            }
+            .col-4{
+                max-width: 100%;
+            }
+            li{
+                margin-bottom: 1rem !important;
+            }
+            ul{
+                margin-left: -5% !important;
+                margin-right: 5%;
+            }
+        }
+        #Stages{
+            .col-auto {
+                width: 100% !important;
+            }
+            h3{
+                font-size: 1.15rem;
+                margin-bottom: 0.25rem;
+            }
+            h4{
+                font-size: 1.1rem;
+            }
+            .card{
+                padding: 0;
+            }
+            .nav-item, .flex-column li {
+                width: 46%;
+                margin: 2% 2% 2% 2%;
+                min-width: 42% !important;
+            }
+            .nav-item .nav-link {
+                padding: 0.5rem 0.1rem !important;
+                min-height: 130px !important;
+            }
+            .tab-content {
+                height: 400px;
+                margin-left: 4%;
+                margin-right: 3%;
+            }
+            .card-body{
+                line-height: 1.4rem;
+                padding: 0.8rem;
+            }
+            .card-text li {
+                border: none;
+                margin-top: 1% !important;
+            }
+        }
+        .slider{
+            width: 50px;
+        }
+        #Customs{
+            .carousel{
+                display: block;
+                width: 70%;
+                margin: 0 auto;
+            }
+            .flex-container{
+                display: none;
+            }
+            .flex-container div{
+                width: 50%;
+                padding: 0 15px;
+            }
+            h2{
+                padding: 0;
+                &:before {
+                    margin-left: -100%;
+                    left: 5%;
+                }
+                &:after {
+                    margin-right: -100%;
+                    right: 5%;
+                }
+            }
+            img{
+                margin-top: 6%;
+            }
+            svg{
+                width: 35px;
+            }
+        }
+        #Calculation{
+            .flex-container, button {
+                width: 100%;
+                margin-left: 0;
+            }
+            button{
+                margin-top: 20px;
+                padding: 10px 0;
+            }
+            .flex-container{
+                div {
+                    width: 100%;
+                    padding: 5px 0;
+                    &:nth-child(2),&:nth-child(1),&:nth-child(3),&:nth-child(6),&:nth-child(7),&:nth-child(8){
+                        width: 100%;
+                    }
+                    &:nth-child(1){
+                        border-top-right-radius: 10px;
+                    }
+                    &:nth-child(5){
+                        border-top-right-radius: 0;
+                    }
+                    &:nth-child(6){
+                        border-bottom-left-radius: 0;
+                    }
+                    &:nth-child(10){
+                        border-bottom-left-radius: 10px;
+                    }
+                    p{
+                        margin-right: 0;
+                        padding: 0.3rem;
+                        font-size: .9rem;
+                    }
+                }
+            }
+            .form-control {
+                padding: .3rem;
+                height: auto;
+                font-size: .9rem !important;
+                margin-bottom: 0 !important;
+            }
+            svg{
+                width: 100px;
+                height: 10px;
+                padding: 0;
+            }
+        }
+        #Package{
+            img{
+                width: 120%;
+            }
+            .flex-container .row {
+                width: 108%;
+                padding: 7.5px 15px 7.5px;
+            }
+            .col-4{
+                max-width: 28%;
+            }
+            .col{
+                padding-right: 0 !important;
+            }
+        }
+        #MyFooter{
+            svg{
+                width: 20px;
+            }
+            .flex-container .inf{
+                width: 100%;
+                .row{
+                    margin-bottom: 4%;
+                }
+                br{
+                    display: none;
+                }
+                &:last-child{
+                    p{
+                        margin-bottom: 4% !important;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 300px){
+        .navbar-brand svg{
+            width: 75%;
+        }
+        h1{
+            font-size: 1.35rem !important;
+            line-height: 2.25rem;
+            margin-bottom: 4% !important;
+        }
+        h2{
+            font-size: 1.15rem !important;
+            padding-top: 0 !important;
+            color: #FF7A00;
+            text-decoration: none;
+            &:before, &:after{
+                display: none !important;
+            }
+        }
+        #Types h2, #Stages h2 {
+            text-decoration: none;
+            text-underline-offset: 1px;
+            text-decoration-color: #FF7A00;
+        }
+        #About, #Calculation{
+            h2{
+                font-size: 1.25rem !important;
+            }
+        }
+        .form-control, .btn, li{
+            font-size: .85rem !important;
+        }
+        p{
+            font-size: .85rem;
+        }
+        #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
+            padding: 25px 0;
+        }
+        #Home{
+            padding: 10px 0 40px;
+            .row{
+                flex-direction: column-reverse;
+            }
+            p{
+                margin-bottom: 6% !important;
+            }
+            p,button, .btn {
+                font-size: .9rem !important;
+            }
+            button{
+                padding: 8px 35px !important;
+            }
+            .carousel{
+                margin-left: 1%;
+            }
+            .carousel img {
+                width: 100%;
+                height: 150px;
+            }
+            .shadow{
+                top: 7%;
+                left: 13%;
+                width: 83%;
+                height: 97%;
+                border: 3px solid #FF7A00;
+            }
+        }
+        #Advantages{
+            .row{
+                flex-direction: column;
+                margin: 0;
+                .row{
+                    flex-direction: row;
+                    margin: 0;
+                }
+            }
+            .number {
+                font-size: 2rem;
+                width: 50px;
+                margin-left: -5%;
+                margin-bottom: 5%;
+            }
+            .col-2{
+                max-width: 30%;
+            }
+            .col, .col-2{
+                padding: 0 5px !important;
+            }
+            svg {
+                width: 50px;
+                margin-left: -5%;
+                padding: 0;
+            }
+            .text {
+                height: 60px;
+                margin-bottom: 0 !important;
+            }
+        }
+        #Types{
+            .col-auto {
+                width: 100% !important;
+            }
+            .flex-column {
+                flex-direction: row !important;
+            }
+            .nav-item, .flex-column li {
+                width: 100%;
+                margin: 2% 2% 2% 2%;
+                min-width: 45% !important;
+            }
+            h3{
+                padding-bottom: 10px;
+                font-size: 1.15rem;
+            }
+            .nav-pills .nav-link {
+                min-height: 65px !important;
+            }
+            .card {
+                padding: 0;
+                margin-top: -4%;
+            }
+            .card-body{
+                padding: .8rem;
+                height: max-content;
+                ul{
+                    margin-left: -8.5%;
+                }
+            }
+            .tab-content{
+                margin-top: 10px;
+                width: 93%;
+            }
+        }
+        #About{
+            .row{
+                flex-direction: column-reverse;
+            }
+            h2{
+                padding-bottom: 10px;
+            }
+            .numbers {
+                width: 180px;
+                height: 180px;
+                padding: 10px;
+                margin: 2% auto;
+                display: block;
+                p{
+                    margin-bottom: 0 !important;
+                }
+            }
+            .number{
+                font-size: 3.5rem !important;
+                margin-bottom: 0 !important;
+            }
+            .col{
+                padding-right: 1rem !important;
+            }
+            .col-4{
+                max-width: 100%;
+            }
+            li{
+                margin-bottom: 1rem !important;
+            }
+            ul{
+                margin-left: -18% !important;
+                margin-right: 5%;
+            }
+        }
+        #Stages{
+            .col-auto {
+                width: 100% !important;
+            }
+            h3{
+                font-size: 1.2rem;
+                margin-bottom: 0.25rem;
+            }
+            h4{
+                font-size: 1.1rem;
+            }
+            .card{
+                padding: 0;
+                ol{
+                    margin-left: -8.5%;
+                }
+            }
+            .nav-item, .flex-column li {
+                width: 90%;
+                margin: 2% 2% 2% 8%;
+                min-width: 42% !important;
+            }
+            .nav-item .nav-link {
+                padding: 0.5rem 0.1rem !important;
+                min-height: 130px !important;
+            }
+            .tab-content {
+                height: max-content;
+                margin-left: 4%;
+                margin-right: 3%;
+            }
+            .card-body{
+                line-height: 1.4rem;
+                padding: 0.8rem;
+            }
+            .card-text li {
+                border: none;
+                margin-top: 1% !important;
+            }
+        }
+        .slider{
+            width: 50px;
+        }
+        #Customs{
+            .carousel{
+                display: block;
+                width: 90%;
+                margin: 0 auto;
+            }
+            .flex-container{
+                display: none;
+            }
+            .flex-container div{
+                width: 50%;
+                padding: 0 15px;
+            }
+            h2{
+                padding: 0;
+                &:before {
+                    margin-left: -100%;
+                    left: 5%;
+                }
+                &:after {
+                    margin-right: -100%;
+                    right: 5%;
+                }
+            }
+            img{
+                margin-top: 6%;
+            }
+            svg{
+                width: 35px;
+            }
+        }
+        #Calculation{
+            .flex-container, button {
+                width: 100%;
+                margin-left: 0;
+            }
+            button{
+                margin-top: 20px;
+                padding: 10px 0;
+            }
+            svg{
+                display: none;
+            }
+            .flex-container{
+                div {
+                    width: 100%;
+                    padding: 5px 0;
+                    &:nth-child(2),&:nth-child(1),&:nth-child(3),&:nth-child(6),&:nth-child(7),&:nth-child(8){
+                        width: 100%;
+                    }
+                    &:nth-child(1){
+                        border-top-right-radius: 10px;
+                    }
+                    &:nth-child(5){
+                        border-top-right-radius: 0;
+                    }
+                    &:nth-child(6){
+                        border-bottom-left-radius: 0;
+                    }
+                    &:nth-child(10){
+                        border-bottom-left-radius: 10px;
+                    }
+                    p{
+                        margin-right: 0;
+                        padding: 0.3rem;
+                        font-size: .9rem;
+                    }
+                }
+            }
+            .form-control {
+                padding: .3rem;
+                height: auto;
+                font-size: .9rem !important;
+                margin-bottom: 0 !important;
+            }
+            svg{
+                width: 100px;
+                height: 10px;
+                padding: 0;
+            }
+        }
+        #Package{
+            img{
+                width: 90%;
+                margin-bottom: 4%;
+            }
+            .flex-container .row {
+                width: 110%;
+                padding: 7.5px 15px 7.5px;
+                flex-direction: column;
+            }
+            .col-4{
+                max-width: 60%;
+            }
+            .col{
+                padding-right: 0 !important;
+            }
+        }
+        #MyFooter{
+            svg{
+                width: 20px;
+            }
+            .flex-container .inf{
+                width: 100%;
+                .row{
+                    margin-bottom: 4%;
+                }
+                br{
+                    display: none;
+                }
+                &:last-child{
+                    p{
+                        margin-bottom: 4% !important;
+                    }
                 }
             }
         }
