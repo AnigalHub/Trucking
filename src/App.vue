@@ -165,7 +165,6 @@
     #About, #Calculation{
         h2{
             color: #FF7A00;
-            padding-top: 5%;
             font-size: 2.5rem !important;
         }
     }
@@ -214,53 +213,24 @@
     #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation{
         padding: 15px 0 60px;
     }
-    .switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 24px;
-        margin-top: 5px;
-        input{
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
+    .custom-switch{
+        width: 100% !important;
     }
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(160, 160, 160, 0.83);
-        border-radius: 15px;
-        transition: .4s;
-        &:before {
-            position: absolute;
-            content: "";
-            height: 16px;
-            width: 16px;
-            left: 4px;
-            top: 4px;
-            border-radius: 8px;
-            background-color: white;
-            -webkit-transition: .4s;
-            transition: .4s;
-        }
-        /* Rounded sliders */
-        .round {
-            border-radius: 34px;
-            &:before {
-                border-radius: 50%;
-            }
-        }
+    .custom-control{
+        padding: 0 !important;
+        border: none !important;
     }
-    input:checked + .slider {
-        background-color: rgba(255, 122, 0, 0.45);
+    label {
+        display: inline !important;
+        margin-left: 40px !important;
+        margin-bottom: 0.5rem !important;
     }
-    input:checked + .slider:before {
-        transform: translateX(36px);
+    .custom-control-input:checked ~ .custom-control-label::before {
+        border-color: rgba(255, 122, 0, 0.45) !important;
+        background-color: rgba(255, 122, 0, 0.45) !important;
+    }
+    .custom-switch .custom-control-label::before {
+        transform: scale(1.05, 1);
     }
     .card{
         padding: 0 3.25rem;
@@ -1140,6 +1110,7 @@
         }
         h2{
             font-size: 1.15rem !important;
+            padding-bottom: 15px !important;
             padding-top: 0 !important;
             color: #FF7A00;
             text-decoration: none;
@@ -1451,6 +1422,7 @@
         }
         h2{
             font-size: 1.15rem !important;
+            padding-bottom: 15px !important;
             padding-top: 0 !important;
             color: #FF7A00;
             text-decoration: none;
