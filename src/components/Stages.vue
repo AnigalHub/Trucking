@@ -4,7 +4,7 @@
             <h2>Процесс перевозок сборных грузов</h2>
             <b-card no-body>
                 <b-tabs pills card vertical>
-                    <b-tab v-for="(stages, index) in Stages" :title="stages.stage +'. '+stages.name ">
+                    <b-tab v-for="(stages, index) in Stages" :title="stages.stage +'. '+ stages.name ">
                         <b-card-text>
                             <h3>Этап {{stages.stage}}</h3>
                             <h4>{{stages.name}}</h4>

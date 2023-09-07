@@ -37,16 +37,16 @@
                 },
                 Customs: [
                     {
-                        src:'./customs/1.png',
-                        alt:'1'
+                        src:'./customs/license1.png',
+                        alt:'лицензия1'
                     },
                     {
-                        src:'./customs/2.png',
-                        alt:'2'
+                        src:'./customs/license2.png',
+                        alt:'лицензия2'
                     },
                     {
-                        src:'./customs/3.png',
-                        alt:'3'
+                        src:'./customs/license3.png',
+                        alt:'лицензия3'
                     }
                 ],
             }

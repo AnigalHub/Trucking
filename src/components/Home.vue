@@ -29,20 +29,20 @@
             return{
                 Images:[
                     {
-                        src:'./home/1.png',
-                        alt:'1'
+                        src:'./home/storage.png',
+                        alt:'склад'
                     },
                     {
-                        src:'./home/2.png',
-                        alt:'2'
+                        src:'./home/trucking.png',
+                        alt:'автоперевозки'
                     },
                     {
-                        src:'./home/3.png',
-                        alt:'3'
+                        src:'./home/cargo.png',
+                        alt:'груз'
                     },
                     {
-                        src:'./home/4.png',
-                        alt:'4'
+                        src:'./home/airtransportation.png',
+                        alt:'авиаперевозки'
                     },
                 ]
             }

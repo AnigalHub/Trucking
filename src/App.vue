@@ -196,16 +196,16 @@
         color: rgba(255, 255, 255, 0.5) !important;
     }
     #Advantages{
-        background: url("../public/bgAd2.png") no-repeat;
+        background: url("../public/bgAd.png") no-repeat;
     }
     #About{
-        background: url("../public/bgAbout2.png") no-repeat;
+        background: url("../public/bgAbout.png") no-repeat;
     }
     #Customs{
-        background: url("../public/bgCustoms2.png") no-repeat;
+        background: url("../public/bgCustoms.png") no-repeat;
     }
     #Package{
-        background: url("../public/bgPack2.jpg") no-repeat;
+        background: url("../public/bgPack.jpg") no-repeat;
     }
     #Advantages, #About, #Customs, #Package{
         background-size: 100% 100%;
@@ -337,23 +337,23 @@
             filter: contrast(90%) brightness(150%);
         }
         .tab-content{
-            background: url("../public/types/55.jpg");
+            background: url("../public/types/bg.jpg");
             border-radius: 5px;
         }
         .nav-item{
             margin: 0 0 5px;
             text-align: center;
             &:nth-child(1) .nav-link{
-                background: url("../public/types/11.jpg");
+                background: url("../public/types/air.jpg");
             }
             &:nth-child(2) .nav-link{
-                background: url("../public/types/22.jpg");
+                background: url("../public/types/auto.jpg");
             }
             &:nth-child(3) .nav-link{
-                background: url("../public/types/33.jpg");
+                background: url("../public/types/train.jpg");
             }
             &:nth-child(4) .nav-link{
-                background: url("../public/types/44.jpg");
+                background: url("../public/types/ship.jpg");
             }
         }
     }
@@ -420,16 +420,16 @@
                 min-height: 220px !important;
             }
             &:nth-child(1) .nav-link{
-                background: url("../public/stages/11.png");
+                background: url("../public/stages/receiving.png");
             }
             &:nth-child(2) .nav-link{
-                background: url("../public/stages/22.png");
+                background: url("../public/stages/delivery.png");
             }
             &:nth-child(3) .nav-link{
-                background: url("../public/stages/33.png");
+                background: url("../public/stages/customs.png");
             }
             &:nth-child(4) .nav-link{
-                background: url("../public/stages/44.png");
+                background: url("../public/stages/tothedoor.png");
             }
         }
         .card-text h4{
