@@ -8,9 +8,9 @@
                 <div><b-form-input autocomplete="off" v-model="formCalculation.name" type="text" placeholder="Наименование"/></div>
                 <div><b-form-input autocomplete="off" v-model="formCalculation.fio" type="text" placeholder="ФИО"/></div>
                 <div><b-form-input autocomplete="off" v-model="formCalculation.phone" type="tel" v-mask="'+7 (###) ###-##-##'" placeholder="+7(9**)***-**-**"/></div>
-                <div><b-form-input autocomplete="off" v-model="formCalculation.email" type="text" placeholder="Email"/></div>
+                <div><b-form-input autocomplete="off" v-model="formCalculation.email" type="email" placeholder="Email"/></div>
                 <div><b-form-input autocomplete="off" v-model="formCalculation.volume" type="number" placeholder="Объем груза, м3"/></div>
-                <div><b-form-input autocomplete="off" v-model="formCalculation.weight" type="text" placeholder="Вес груза, кг"/></div>
+                <div><b-form-input autocomplete="off" v-model="formCalculation.weight" type="number" placeholder="Вес груза, кг"/></div>
                 <div><b-form-checkbox v-model="formCalculation.insurance" name="check-button" switch><p>Страховка</p></b-form-checkbox></div>
                 <div><b-form-checkbox v-model="formCalculation.package" name="check-button" switch><p>Упаковка</p></b-form-checkbox></div>
             </form>
