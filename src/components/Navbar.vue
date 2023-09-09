@@ -10,15 +10,15 @@
                     <b-icon v-else icon="chevron-bar-down"></b-icon>
                 </template>
             </b-navbar-toggle>
-            <b-collapse id="navbar-toggle-collapse" class="justify-content-lg-start" is-nav>
+            <b-collapse id="navbar-toggle-collapse" class="justify-content-end" is-nav v-model="isExpanded">
                 <b-navbar-nav>
-                    <b-nav-item href="#About">О нас</b-nav-item>
-                    <b-nav-item href="#Advantages">Преимущества</b-nav-item>
-                    <b-nav-item href="#Stages">Этапы работы</b-nav-item>
-                    <b-nav-item href="#Types">Грузоперевозки</b-nav-item>
-                    <b-nav-item href="#Calculation">Расчет стоимости</b-nav-item>
-                    <b-nav-item href="#Package">Упаковка</b-nav-item>
-                    <b-nav-item href="#MyFooter">
+                    <b-nav-item  @click="scrollToId" href="#About">О нас</b-nav-item>
+                    <b-nav-item  @click="scrollToId" href="#Advantages">Преимущества</b-nav-item>
+                    <b-nav-item  @click="scrollToId" href="#Stages">Этапы работы</b-nav-item>
+                    <b-nav-item  @click="scrollToId" href="#Types">Грузоперевозки</b-nav-item>
+                    <b-nav-item  @click="scrollToId" href="#Calculation">Расчет стоимости</b-nav-item>
+                    <b-nav-item  @click="scrollToId" href="#Package">Упаковка</b-nav-item>
+                    <b-nav-item  @click="scrollToId" href="#MyFooter">
                         <a :href="href" :target="target">
                             {{http}}
                         </a>
@@ -39,7 +39,21 @@
                 svg:logo,
                 href:'tel:' + information.telephone,
                 target:'_self',
-                http:information.telephone
+                http:information.telephone,
+                isExpanded: false,
+            }
+        },
+        methods:{
+            scrollToId(event){
+                let offsetY = 70;
+                if(this.isExpanded){
+                    let nav = document.getElementById(("Nav"));
+                    let bounds =  nav.getBoundingClientRect();
+                    offsetY = bounds.height;
+                }
+                let element = document.getElementById(event.target.hash.replace("#", ""));
+                window.scrollTo({top: element.offsetTop - offsetY, left: 0, behavior: 'smooth'});
+                event.preventDefault();
             }
         }
     }
