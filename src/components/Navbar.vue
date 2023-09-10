@@ -19,9 +19,7 @@
                     <b-nav-item  @click="scrollToId" href="#Calculation">Расчет стоимости</b-nav-item>
                     <b-nav-item  @click="scrollToId" href="#Package">Упаковка</b-nav-item>
                     <b-nav-item  @click="scrollToId" href="#MyFooter">
-                        <a :href="href" :target="target">
-                            {{http}}
-                        </a>
+                        <a :href="'tel:'+ information.telephone" target="_self">{{information.telephone}}</a>
                     </b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
@@ -37,9 +35,7 @@
         data(){
             return{
                 svg:logo,
-                href:'tel:' + information.telephone,
-                target:'_self',
-                http:information.telephone,
+                information: information,
                 isExpanded: false,
             }
         },
