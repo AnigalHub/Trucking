@@ -103,11 +103,12 @@
     }
     /*заголовки*/
     h1{
-        margin-top: 8% !important;
-        margin-bottom: 10% !important;
-        color: white;
-        font-size: 3.7rem !important;
+        margin-top: 40px !important;
+        margin-bottom: 30px !important;
+        font-size: 2.3rem !important;
         line-height: 3.8rem;
+        text-transform: uppercase;
+        color: #FF7A00;
     }
     h2{
         padding-top: 30px;
@@ -211,7 +212,7 @@
         background-size: 100% 100%;
     }
     #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation{
-        padding: 15px 0 60px;
+        padding: 15px 0 50px;
     }
     .custom-switch{
         width: 100% !important;
@@ -254,9 +255,6 @@
             .nav-link{
                 background-size: 100% 100% !important;
             }
-            &:nth-child(4){
-                //margin-bottom: 0 !important;
-            }
         }
         .tab-content{
             margin-left: 10px;
@@ -268,7 +266,29 @@
         text-align: center;
     }
     #Home{
-        padding: 40px 0 100px;
+        padding: 20px 0 100px;
+        ul{
+            margin: 30px 0 !important;
+        }
+        li{
+            margin: 25px 0 !important;
+            color: white;
+            font-size: 1.5rem !important;
+            line-height: 2.4rem;
+        }
+        ul{
+            list-style: none;
+        }
+        ul > li{
+            position: relative;
+            margin: 10px;
+        }
+        ul > li:before{
+            content: '✔';
+            position: absolute;
+            left: -40px;
+            color: #FF7A00;
+        }
         p{
             font-size: 1.45rem;
             margin-bottom: 8% !important;
@@ -276,7 +296,9 @@
         .carousel {
             margin-top: 10%;
             width: 95%;
-            margin-left: -2%;
+            li{
+                margin: 3.5px !important;
+            }
             img{
                 height: 400px;
             }
@@ -302,7 +324,7 @@
     #Advantages{
         .number{
             color: #FF7A00;
-            font-size: 3.8rem;
+            font-size: 3.65rem;
             text-align: center;
             transform: scale(1.2, 1.2);
         }
@@ -436,7 +458,6 @@
             text-align: center;
             font-weight: 700 !important;
             margin-top: -3%;
-            margin-bottom: 5% !important;
         }
     }
     #Customs{
@@ -536,8 +557,9 @@
                 /*АДАПТИВНОСТЬ*/
     @media screen and (min-width: 992px) and (max-width: 1200px){
         h1{
-            font-size: 3.2rem !important;
-            line-height: 3.5rem;
+            margin: 20px 0 !important;
+            font-size: 1.9rem !important;
+            line-height: 3rem;
         }
         #About, #Calculation{
             h2{
@@ -550,15 +572,24 @@
         p{
             font-size: 1.15rem;
         }
-        #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
+       #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
             padding: 15px 0 40px;
         }
         #Home{
+            padding: 0 0 70px;
+            ul{
+                margin: 35px 0 !important;
+            }
+            li{
+                margin: 20px 0 !important;
+                font-size: 1.3rem !important;
+                line-height: 2rem;
+            }
             p,button, .btn {
                 font-size: 1.25rem !important;
             }
            .carousel img {
-                height: 350px;
+                height: 340px;
            }
         }
         #Advantages{
@@ -575,10 +606,13 @@
                 font-size: 1.5rem;
             }
             .nav-pills .nav-link {
-                height: 130px !important;
+                height: 100px !important;
             }
             .card {
                 padding: 0 2rem;
+            }
+            .card-body{
+                line-height: 1.6rem;
             }
         }
         #About{
@@ -591,19 +625,19 @@
         #Stages{
             h3{
                 font-size: 1.4rem;
-                margin-bottom: 0.25rem;
+                margin-bottom: 0;
             }
             h4{
                 font-size: 1.2rem;
             }
             .nav-item .nav-link {
-                min-height: 190px !important;
+                min-height: 200px !important;
             }
            .tab-content {
-                height: 430px;
+                height: 450px;
            }
            .card-body{
-               line-height: 1.55rem;
+               line-height: 1.4rem;
            }
         }
         .slider{
@@ -650,8 +684,9 @@
     }
     @media screen and (min-width: 768px) and (max-width: 992px){
         h1{
-            font-size: 2.5rem !important;
-            line-height: 2.9rem;
+            margin: 20px 0 !important;
+            font-size: 1.4rem !important;
+            line-height: 2.5rem;
         }
         h2{
           font-size: 1.35rem !important;
@@ -671,12 +706,20 @@
             padding: 15px 0 45px;
         }
         #Home{
-            padding: 30px 0 80px;
+            padding: 0 0 50px;
+            ul{
+                margin: 25px 0 !important;
+            }
+            li{
+                margin: 10px 0 !important;
+                font-size: 1.1rem !important;
+                line-height: 1.7rem;
+            }
             p,button, .btn {
                 font-size: 1rem !important;
             }
             .carousel img {
-                height: 290px;
+                height: 260px;
             }
             .shadow{
                 height: 99%;
@@ -748,7 +791,7 @@
                 min-height: 150px !important;
             }
             .tab-content {
-                height: 260px;
+                height: 275px;
             }
             .card-body{
                 line-height: 1.4rem;
@@ -825,9 +868,9 @@
     }
     @media screen and (min-width: 500px) and (max-width: 768px){
         h1{
-            font-size: 1.95rem !important;
+            margin: 25px 0 0 !important;
+            font-size: 1.5rem !important;
             line-height: 2.25rem;
-            margin-bottom: 4% !important;
         }
         h2{
             font-size: 1.15rem !important;
@@ -845,10 +888,18 @@
             font-size: .9rem;
         }
         #Advantages, #Customs, #Package, #Types, #Stages, #About, #Calculation {
-            padding: 35px 0 35px;
+            padding: 25px 0;
         }
         #Home{
-            padding: 10px 0 40px;
+            padding: 0 0 20px;
+            ul{
+                margin: 20px 0 20px !important;
+            }
+            li{
+                margin: 10px 0 !important;
+                font-size: 1rem !important;
+                line-height: 1.4rem;
+            }
             .row{
                 flex-direction: column-reverse;
             }
@@ -922,7 +973,8 @@
             }
             .card-body{
                 padding: .8rem;
-                height: 410px;
+                height: 380px;
+                line-height: 1.2rem;
             }
             .tab-content{
                 margin-top: 20px;
@@ -981,7 +1033,7 @@
             }
             .nav-item .nav-link {
                 padding: 0.5rem 0.1rem !important;
-                min-height: 160px !important;
+                min-height: 145px !important;
             }
             .tab-content {
                 height: 250px;
@@ -989,7 +1041,7 @@
                 margin-right: 3%;
             }
             .card-body{
-                line-height: 1.4rem;
+                line-height: 1.2rem;
                 padding: 0.8rem;
             }
             .card-text li {
@@ -1104,9 +1156,9 @@
     }
     @media screen and (min-width: 300px) and (max-width: 500px){
         h1{
-            font-size: 1.55rem !important;
-            line-height: 2.25rem;
-            margin-bottom: 4% !important;
+            font-size: 1.2rem !important;
+            line-height: 2rem;
+            margin: 25px 0 0 !important;
         }
         h2{
             font-size: 1.15rem !important;
@@ -1138,7 +1190,15 @@
             padding: 25px 0 35px;
         }
         #Home{
-            padding: 10px 0 40px;
+            padding: 0 0 20px;
+            ul{
+                margin: 20px 0 20px !important;
+            }
+            li{
+                margin: 10px 0 !important;
+                font-size: 1rem !important;
+                line-height: 1.3rem;
+            }
             .row{
                 flex-direction: column-reverse;
             }
@@ -1220,7 +1280,8 @@
             }
             .card-body{
                 padding: .8rem;
-                height: 540px;
+                height: 430px;
+                line-height: 1.2rem;
             }
             .tab-content{
                 margin-top: 10px;
@@ -1282,12 +1343,12 @@
                 min-height: 130px !important;
             }
             .tab-content {
-                height: 400px;
+                height: 410px;
                 margin-left: 4%;
                 margin-right: 3%;
             }
             .card-body{
-                line-height: 1.4rem;
+                line-height: 1.2rem;
                 padding: 0.8rem;
             }
             .card-text li {
@@ -1416,9 +1477,9 @@
             width: 75%;
         }
         h1{
-            font-size: 1.35rem !important;
-            line-height: 2.25rem;
-            margin-bottom: 4% !important;
+            font-size: 1.2rem !important;
+            line-height: 2rem;
+            margin: 25px 0 0 !important;
         }
         h2{
             font-size: 1.15rem !important;
@@ -1450,7 +1511,18 @@
             padding: 25px 0;
         }
         #Home{
-            padding: 10px 0 40px;
+            padding: 0 0 20px;
+            ul{
+                margin: 15px 0 15px !important;
+            }
+            ul > li:before {
+                left: -30px;
+            }
+            li{
+                margin: 10px 0 !important;
+                font-size: .9rem !important;
+                line-height: 1.1rem;
+            }
             .row{
                 flex-direction: column-reverse;
             }
