@@ -68,6 +68,7 @@
     .navbar-brand{
         padding-top: 0 !important;
         padding-bottom: 0 !important;
+        /*svg*/
         svg{
             width: 150px;
             transform: scale(1.1, 1);
@@ -88,6 +89,7 @@
         font-family: "Montserrat", sans-serif;
         font-size: 1rem;
         font-weight: 400 !important;
+        /*список*/
         a{
             color: #FF7A00 !important;
         }
