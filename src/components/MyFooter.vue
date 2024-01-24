@@ -9,16 +9,12 @@
                             <p><a :href="'tel:'+ information.telephone" target="_self">{{information.telephone}}</a></p>
                         </b-col>
                     </b-row>
-                    <br/>
+                </div>
+                <div class="inf">
                     <b-row>
                         <b-col cols="1"><component :is="document"/></b-col>
                         <b-col><p><a :href="'mailto:'+ information.mail" target="_self">{{information.mail}}</a></p></b-col>
                     </b-row>
-                </div>
-                <div class="inf">
-                    <p>{{information.city}}</p>
-                    <br/>
-                    <p>{{information.address}}</p>
                 </div>
             </div>
         </b-container>
