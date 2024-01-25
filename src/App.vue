@@ -1497,7 +1497,6 @@
         }
         /*компонент - О нас*/
         #About{
-            с
             .row{
                 flex-direction: column-reverse;
             }
