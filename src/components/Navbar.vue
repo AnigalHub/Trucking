@@ -84,8 +84,8 @@
     /*все кнопки в меню*/
     .nav-link{
         color: #ffffff !important;
-        padding-right: .65rem !important;
-        padding-left: .65rem !important;
+        padding-right: .5rem !important;
+        padding-left: .5rem !important;
         font-family: "Montserrat", sans-serif;
         font-size: 1rem;
         font-weight: 400 !important;
